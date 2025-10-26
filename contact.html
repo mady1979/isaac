@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact ISAAC - Institute for South Asian Art and Culture. Located in Greater Jacksonville, Northeast Florida.">
+    <title>Contact Us - ISAAC</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>ISAAC</h1>
+                        <p class="logo-subtitle">Institute for South Asian Art and Culture</p>
+                    </a>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="workshops.html">Workshops & Events</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="page-header-content">
+            <h1>Get In Touch</h1>
+            <p>We'd love to hear from you and answer your questions</p>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-main-section">
+        <div class="container">
+            <div class="contact-content">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2>Send Us a Message</h2>
+                    <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="interest">I'm Interested In *</label>
+                            <select id="interest" name="interest" required>
+                                <option value="">Please select...</option>
+                                <option value="kathak">Kathak Classes</option>
+                                <option value="odissi">Odissi Classes</option>
+                                <option value="bharatnatyam">Bharatnatyam Classes</option>
+                                <option value="multiple">Multiple Programs</option>
+                                <option value="workshops">Workshops & Events</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="age">Student Age Group</label>
+                            <select id="age" name="age">
+                                <option value="">Please select...</option>
+                                <option value="child">Child (5-12 years)</option>
+                                <option value="teen">Teen (13-17 years)</option>
+                                <option value="adult">Adult (18+ years)</option>
+                                <option value="senior">Senior (60+ years)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="experience">Previous Dance Experience</label>
+                            <select id="experience" name="experience">
+                                <option value="">Please select...</option>
+                                <option value="none">No experience</option>
+                                <option value="beginner">Beginner (0-1 years)</option>
+                                <option value="intermediate">Intermediate (2-5 years)</option>
+                                <option value="advanced">Advanced (5+ years)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Tell us more about your interest in classical dance, any questions you have, or what you'd like to learn..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                        
+                        <p class="form-note">* Required fields</p>
+                    </form>
+                    
+                    <div id="formMessage" class="form-message hidden"></div>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="contact-info-container">
+                    <h2>Contact Information</h2>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Location</h4>
+                            <p>Greater Jacksonville Area<br>Northeast Florida</p>
+                            <p class="info-note">Contact us for specific studio address and directions</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Email</h4>
+                            <p><a href="mailto:info@isaac-dance.com">info@isaac-dance.com</a></p>
+                            <p class="info-note">We typically respond within 24-48 hours</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Phone</h4>
+                            <p><a href="tel:+19045551234">(904) 555-1234</a></p>
+                            <p class="info-note">Monday - Saturday, 10:00 AM - 7:00 PM EST</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Studio Hours</h4>
+                            <p>Classes held throughout the week</p>
+                            <p class="info-note">Contact us for current class schedule</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-connect">
+                        <h4>Connect With Us</h4>
+                        <div class="social-icons-large">
+                            <a href="#" aria-label="Facebook" title="Follow us on Facebook">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" aria-label="Instagram" title="Follow us on Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" aria-label="YouTube" title="Subscribe to our YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="#" aria-label="Twitter" title="Follow us on Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                        <p class="social-note">Follow us for updates, event announcements, and glimpses of our classes and performances!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visit Us Section -->
+    <section class="visit-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Visit Our Studio</h2>
+                <div class="divider"></div>
+                <p class="lead">We welcome you to visit ISAAC and experience the beauty of classical Indian dance firsthand</p>
+            </div>
+            
+            <div class="visit-content">
+                <div class="visit-card">
+                    <i class="fas fa-door-open"></i>
+                    <h3>Trial Classes</h3>
+                    <p>Experience a class before committing. Contact us to schedule your trial session in any of our three dance forms.</p>
+                </div>
+                
+                <div class="visit-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Studio Tours</h3>
+                    <p>Visit our studio, meet our instructors, and learn more about our programs. Schedule a tour at your convenience.</p>
+                </div>
+                
+                <div class="visit-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Open Houses</h3>
+                    <p>Attend our periodic open house events to watch demonstrations, meet current students, and ask questions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="contact-faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Quick Answers</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="faq-list">
+                <div class="faq-item-contact">
+                    <h4>What should I expect from my first class?</h4>
+                    <p>Your first class will be an introduction to the basics of your chosen dance form. Wear comfortable clothing you can move in. We'll guide you through fundamental positions, movements, and rhythm patterns. No prior experience is necessary!</p>
+                </div>
+                
+                <div class="faq-item-contact">
+                    <h4>What age groups do you teach?</h4>
+                    <p>We welcome students of all ages, from young children (starting around age 5) to adults and seniors. Each age group receives age-appropriate instruction tailored to their learning needs and physical capabilities.</p>
+                </div>
+                
+                <div class="faq-item-contact">
+                    <h4>Do I need any special equipment or clothing?</h4>
+                    <p>For beginners, comfortable workout clothes are fine. As you progress, you may want to invest in traditional practice attire. We provide guidance on proper attire and where to purchase it. Ankle bells (ghungroos) are provided for Kathak students during class.</p>
+                </div>
+                
+                <div class="faq-item-contact">
+                    <h4>How do I choose between degree and recreational tracks?</h4>
+                    <p>The degree track is structured and prepares students for examinations and certifications. The recreational track offers flexibility and focuses on personal enjoyment. We're happy to discuss your goals and help you choose the right path.</p>
+                </div>
+                
+                <div class="faq-item-contact">
+                    <h4>Can I switch between dance forms?</h4>
+                    <p>While each classical form has its own distinct technique, many students eventually explore multiple forms. We recommend establishing a foundation in one form first, typically 1-2 years, before adding another.</p>
+                </div>
+                
+                <div class="faq-item-contact">
+                    <h4>What is your cancellation and makeup policy?</h4>
+                    <p>We understand that schedules change. Contact us to discuss our current policies regarding class cancellations, makeups, and schedule adjustments. We strive to be flexible while maintaining quality instruction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enrollment CTA -->
+    <section class="contact-cta-section">
+        <div class="container">
+            <div class="contact-cta-content">
+                <h2>Ready to Begin Your Classical Dance Journey?</h2>
+                <p>Join the ISAAC community and discover the transformative power of Indian classical arts. Whether you're a complete beginner or have previous experience, we have a program that's right for you.</p>
+                <div class="cta-buttons">
+                    <a href="#contactForm" class="btn btn-primary btn-large">Send Us a Message</a>
+                    <a href="programs.html" class="btn btn-secondary btn-large">View Programs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ISAAC</h3>
+                    <p>Institute for South Asian Art and Culture LLC</p>
+                    <p class="footer-tagline">Preserving tradition, inspiring excellence</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="workshops.html">Workshops</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="programs.html#kathak">Kathak</a></li>
+                        <li><a href="programs.html#odissi">Odissi</a></li>
+                        <li><a href="programs.html#bharatnatyam">Bharatnatyam</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Location</h4>
+                    <p>Greater Jacksonville Area<br>Northeast Florida</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2016-2025 Institute for South Asian Art and Culture LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
