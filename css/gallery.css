@@ -1,0 +1,122 @@
+/* Gallery styles */
+
+.gallery-section {
+  padding: 4rem 0;
+}
+
+.gallery-grid {
+  min-height: 120px;
+  display: block;
+}
+
+.gallery-placeholder {
+  text-align: center;
+  color: #666;
+  padding: 2rem 0;
+}
+
+.gallery-grid-inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+.gallery-item {
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+  outline: none;
+}
+
+.gallery-item:focus,
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-item figcaption {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  color: #333;
+  background: #fafafa;
+}
+
+/* Lightbox modal */
+.gallery-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-modal.open {
+  display: flex;
+}
+
+.gallery-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(2px);
+}
+
+.gallery-modal-content {
+  position: relative;
+  max-width: 92%;
+  max-height: 92%;
+  margin: 1rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery-modal-close {
+  position: absolute;
+  right: -0.4rem;
+  top: -0.4rem;
+  background: #fff;
+  border: none;
+  font-size: 1.8rem;
+  line-height: 1;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+#galleryModalImage {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 4px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.3);
+  background: #000;
+}
+
+.gallery-modal-caption {
+  margin-top: 0.75rem;
+  color: #fff;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* small screen tweaks */
+@media (max-width: 600px) {
+  .gallery-item img { height: 110px; }
+  .gallery-modal-close { font-size: 1.4rem; }
+}
