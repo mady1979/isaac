@@ -17,14 +17,19 @@ async function initGallery() {
   const galleryGrid = document.getElementById('galleryGrid');
   if (!galleryGrid) return;
 
+  // Determine a robust base URL relative to where this script is served.
+  // This makes paths work whether the site is hosted at domain root or as a project site (e.g. /owner/repo/).
+  const scriptBase = document.currentScript ? new URL('.', document.currentScript.src) : new URL('/', window.location.origin);
+
   // Try manifest first
   let images = [];
   try {
-    const resp = await fetch('/gallery/index.json', {cache: 'no-store'});
+    const manifestUrl = new URL('../gallery/index.json', scriptBase).href;
+    const resp = await fetch(manifestUrl, {cache: 'no-store'});
     if (resp.ok) {
       const list = await resp.json();
       if (Array.isArray(list) && list.length) {
-        images = list.map(name => `/gallery/${name}`);
+        images = list.map(name => new URL(`../gallery/${name}`, scriptBase).href);
       }
     }
   } catch (e) {
@@ -39,8 +44,8 @@ async function initGallery() {
     for (let i = 1; i <= maxFiles; i++) {
       let foundOne = false;
       for (const ext of exts) {
-        // Use Image() load detection to avoid CORS/HEAD issues
-        const candidate = `/gallery/${i}.${ext}`;
+        // Construct candidate URL relative to scriptBase
+        const candidate = new URL(`../gallery/${i}.${ext}`, scriptBase).href;
         try {
           await tryLoadImage(candidate);
           found.push(candidate);
@@ -50,9 +55,7 @@ async function initGallery() {
           // not found, try next extension
         }
       }
-      if (!foundOne) {
-        // continue scanning — some hosts may skip numbers; keep scanning
-      }
+      // continue scanning — keep scanning even if some numbers are missing
     }
     images = found;
   }
